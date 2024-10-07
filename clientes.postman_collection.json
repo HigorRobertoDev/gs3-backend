@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "74b8cab7-620b-4a95-b220-bb06b0cbd027",
+		"name": "clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12210399"
+	},
+	"item": [
+		{
+			"name": "Cadastrar",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"admin\",\r\n    \"nome\": \"Higao\",\r\n    \"cpf\": \"03528843128\",\r\n    \"endereco\": {\r\n        \"cep\": \"72115145\",\r\n        \"cidade\": \"Brasília\",\r\n        \"bairro\": \"Taguatinga\",\r\n        \"logradouro\": \"CNB14\",\r\n        \"complemento\": \"Lote 3 apto 706\",\r\n        \"uf\": \"DF\"\r\n    },\r\n    \"emails\": [\r\n        {\r\n            \"email\": \"higao@gmail.com\"\r\n        },\r\n        {\r\n            \"email\": \"higor.silva@gmail.com\"\r\n        }\r\n    ],\r\n    \"telefones\": [\r\n        {\r\n            \"ddd\": \"61\",\r\n            \"numero\": \"991871010\",\r\n             \"tipoTelefoneId\": 3\r\n        },\r\n        {\r\n            \"ddd\": \"61\",\r\n            \"numero\": \"34355843\",\r\n            \"tipoTelefoneId\": 1\r\n        }\r\n    ]\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/cadastrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"cadastrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"login\": \"admin\",\n    \"nome\": \"Higao de guararema\",\n    \"cpf\": \"03528843128\",\n    \"endereco\": {\n        \"cep\": \"72115145\",\n        \"cidade\": \"xxxxx\",\n        \"bairro\": \"Plano\",\n        \"logradouro\": \"CNB14\",\n        \"complemento\": \"Lote 3 apto 706\",\n        \"uf\": \"DF\"\n    },\n    \"emails\": [\n        {\n            \"email\": \"higao@gmail.com\"\n        },\n        {\n            \"email\": \"higor.silva@gmail.com\"\n        }\n    ],\n    \"telefones\": [\n        {\n            \"ddd\": \"65\",\n            \"numero\": \"991871010\",\n            \"tipoTelefone\": \"CELULAR\"\n        },\n        {\n            \"ddd\": \"62\",\n            \"numero\": \"34355843\",\n            \"tipoTelefone\": \"RESIDENCIAL\"\n        }\n    ]\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/alterar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"alterar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "recuperar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/clientes?login=admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "admin"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clientes/deletar/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clientes",
+						"deletar",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticar",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\": \"admin\",\r\n    \"pass\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/autenticar-login?user=admin&pass=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"autenticar-login"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "admin"
+						},
+						{
+							"key": "pass",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
