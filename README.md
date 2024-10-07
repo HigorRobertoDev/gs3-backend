@@ -4,7 +4,7 @@
 3. Para validação de api's utilizar o caminho http:localhost:8080
 4. Para esse projeto, utilizei a versão 11 do Java.
 # Collections 
-1. O arquivo com exemplos de api's encontra-se no caminho: https://github.com/HigorRobertoDev/gs3-backend/clientes.postman_collection.json
+1. O arquivo com exemplos de api's encontra-se no caminho: https://github.com/HigorRobertoDev/gs3-backend/blob/master/clientes.postman_collection.json
 2. Caso realize o clone ou download do projeto, o mesmo se encontra na pasta raiz.
 
 # Banco de dados
@@ -16,4 +16,4 @@ Os dados de acesso para conexão são:
 
 JDBCUrl: jdbc:h2:mem:gs3Backend
 Username: admin
-Password: 123456 conforme imagem anexada [img.png](img.png)
+Password: 123456 conforme
